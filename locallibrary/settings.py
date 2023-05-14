@@ -29,8 +29,13 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-mqa=&v!517m*xe
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+## For example, for a site URL at 'web-production-d2fdc.up.railway.app'
 
+ALLOWED_HOSTS = ['web-production-d2fdc.up.railway.app', '127.0.0.1']
+
+# During development, you can instead set just the base URL 
+# you might decide to change the site a few times 
+# ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
 
 # Application definition
 
@@ -146,3 +151,9 @@ DATABASES['default'].update(db_from_env)
 # Simplified static file serving
 # http://pypi.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+## For example, for a site URL is at 'web-production-d2fdc.up.railway.app'
+CSRF_TRUSTED_ORIGINS = ['web-production-d2fdc.up.railway.app']
+
+# During development/ for this tutorial you can instead set just the base URL 
+# CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']
