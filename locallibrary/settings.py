@@ -131,7 +131,7 @@ USE_TZ = True
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # The URL to use when referring to static files (where they will be served from) 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -150,9 +150,9 @@ DATABASES['default'].update(db_from_env)
 
 # Simplified static file serving
 # http://pypi.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ## For example, for a site URL is at 'web-production-d2fdc.up.railway.app'
 #CSRF_TRUSTED_ORIGINS = ['https://web-production-d2fdc.up.railway.app']
