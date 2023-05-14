@@ -150,7 +150,9 @@ DATABASES['default'].update(db_from_env)
 
 # Simplified static file serving
 # http://pypi.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ## For example, for a site URL is at 'web-production-d2fdc.up.railway.app'
 #CSRF_TRUSTED_ORIGINS = ['https://web-production-d2fdc.up.railway.app']
