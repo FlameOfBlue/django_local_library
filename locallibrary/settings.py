@@ -153,7 +153,7 @@ DATABASES['default'].update(db_from_env)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ## For example, for a site URL is at 'web-production-d2fdc.up.railway.app'
-CSRF_TRUSTED_ORIGINS = ['https://web-production-d2fdc.up.railway.app']
-
+#CSRF_TRUSTED_ORIGINS = ['https://web-production-d2fdc.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://*.railway.app','https://*.127.0.0.1']
 # During development/ for this tutorial you can instead set just the base URL 
 # CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']
